@@ -1,0 +1,3 @@
+﻿  test.c
+D:\小许的C语言2.0\c-from-white-to-master\Project0725\Project0725\test.c(72,33): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  Project0725.vcxproj -> D:\小许的C语言2.0\c-from-white-to-master\Project0725\x64\Debug\Project0725.exe
