@@ -1,2 +1,3 @@
 ﻿  test.c
+D:\github托管\C-learn\Project Tower of Hanoi\Project Tower of Hanoi\test.c(41,20): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
   Project Tower of Hanoi.vcxproj -> D:\github托管\C-learn\Project Tower of Hanoi\x64\Debug\Project Tower of Hanoi.exe
