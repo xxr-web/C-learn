@@ -63,8 +63,86 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int i = 10;
+//	return 0;
+// }
+
+//void line(int x)
+//{
+//	int j = 0;
+//	for (j = 31; j >= 0; j--)
+//	{
+//		if ((x & (1 << j)) != 0)
+//		{
+//			printf("1");
+//		}
+//		else
+//		{
+//			printf("0");
+//		}
+//	}
+//	printf("\n");
+//}
+//
+//void oneline(int x)
+//{
+//	int j = 0;
+//	for (j = 30; j >= 0; j = j - 2)
+//	{
+//		if ((x & (1 << j)) != 0)
+//		{
+//			printf("1");
+//		}
+//		else
+//		{
+//			printf("0");
+//		}
+//	}
+//	printf("\n");
+//}
+//
+//void twoline(int x)
+//{
+//	int j = 0;
+//	for (j = 31; j >= 1; j = j - 2)
+//	{
+//		if ((x & (1 << j)) != 0)
+//		{
+//			printf("1");
+//		}
+//		else
+//		{
+//			printf("0");
+//		}
+//	}
+//	printf("\n");
+//}
+//
+//int main()
+//{
+//	int i = 0;
+//	scanf("%d", &i);
+//	line(i);
+//	oneline(i);
+//	twoline(i);
+//	return 0;
+//}
+
 int main()
 {
-	int i = 10;
+	int arr[5] = { 0 };
+	int i = 0;
+	for (i = 0; i < 5; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	int only = arr[0];
+	for (i = 1; i < 5; i++)
+	{
+		only = only ^ arr[i];
+	}
+	printf("%d\n", only);
 	return 0;
 }
