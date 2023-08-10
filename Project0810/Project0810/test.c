@@ -234,52 +234,97 @@
 //}
 //
 
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <string.h>
+//
+//void Reverse(char* p, int start, int end)
+//{
+//	int i = 0, j = 0;
+//	for (i = start, j = end; i <= j; i++, j--)
+//	{
+//		char ret = *(p + i);
+//		*(p + i) = *(p + j);
+//		*(p + j) = ret;
+//	}
+//}
+//
+//int Reverse1(char* p, char* p1, int x)
+//{
+//	int i = 0, j = 0;
+//	for (i = 0, j = x - i; i < x; i++)
+//	{
+//		Reverse(p1, 0, i - 1);
+//		Reverse(p1, i, x - 1);
+//		Reverse(p1, 0, x - 1);
+//		if ((strcmp(p, p1)) == 0)
+//		{
+//			return 1;
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int i = 0;
+//	char arr[100] = { '0' };
+//	char arr1[100] = { '0' };
+//	/*printf("请输入数组元素个数:");
+//	scanf("%d", &i);*/
+//	while (1)
+//	{
+//		gets(arr);
+//		gets(arr1);
+//		size_t sz = strlen(arr);
+//		int ret = Reverse1(arr, arr1, sz);
+//		printf("%d\n", ret);
+//	}
+//}
 
-void Reverse(char* p, int start, int end)
+int main()
 {
-	int i = 0, j = 0;
-	for (i = start, j = end; i <= j; i++, j--)
+	int i = 0;
+	int arr[100] = { 0 };
+	for (i = 0; i < 100; i++)
 	{
-		char ret = *(p + i);
-		*(p + i) = *(p + j);
-		*(p + j) = ret;
+		arr[i] = i + 1;
 	}
-}
-
-int Reverse1(char* p, char* p1, int x)
-{
-	int i = 0, j = 0;
-	for (i = 0, j = x - i; i < x; i++)
+	arr[0] = 0;
+	for (i = 1; i < 100; i++)
 	{
-		Reverse(p1, 0, i - 1);
-		Reverse(p1, i, x - 1);
-		Reverse(p1, 0, x - 1);
-		if ((strcmp(p, p1)) == 0)
+		if (0 == arr[i])
 		{
-			return 1;
+			continue;
+		}
+		int j = 0;
+		for (j = i + 1; j < 100; j++)
+		{
+			if (arr[j] != 0)
+			{
+				if (arr[j] % arr[i] == 0)
+				{
+					arr[j] = 0;
+				}
+			}
+		}
+	}
+	printf("这是使用筛选法判断出来的素数:");
+	for (i = 0; i < 100; i++)
+	{
+		if (arr[i] != 0)
+		{
+			printf("%d ", arr[i]);
 		}
 	}
 	return 0;
 }
-int main()
-{
-	int i = 0;
-	char arr[100] = { '0' };
-	char arr1[100] = { '0' };
-	/*printf("请输入数组元素个数:");
-	scanf("%d", &i);*/
-	while (1)
-	{
-		gets(arr);
-		gets(arr1);
-		size_t sz = strlen(arr);
-		int ret = Reverse1(arr, arr1, sz);
-		printf("%d\n", ret);
-	}
-}
+//筛选法求素数
+//首先将一定范围的数按次序排列起来
+//之后，因为1既不是素数也不是合数，直接抛弃
+//2是最小的素数，从2的下一位开始，往后所有2的倍数抛弃
+//抛弃后的2的下一位是3，从3的下一位开始，往后所有3的倍数抛弃
+//抛弃后的3的下一位是5，从5的下一位开始，往后所有5的倍数抛弃
+//在实现过程中，注意已经被转换成0的数，需要如何处理才能不影响正常的筛选
 
-int main()
+
 
 

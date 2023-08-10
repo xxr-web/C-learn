@@ -1,4 +1,2 @@
 ﻿  test.c
-D:\github托管\C-learn\Project0810\Project0810\test.c(275,3): warning C4013: “gets”未定义；假设外部返回 int
-D:\github托管\C-learn\Project0810\Project0810\test.c(278,33): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
   Project0810.vcxproj -> D:\github托管\C-learn\Project0810\x64\Debug\Project0810.exe
