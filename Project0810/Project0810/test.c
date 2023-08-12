@@ -360,48 +360,48 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-int main()
-{
-	int i = 0;
-	int arr[200] = { 0 };
-	for (i = 0; i < 200; i++)
-	{
-		arr[i] = i + 1;
-	}
-	arr[0] = 0;
-	for (i = 1; i < 13; i++)
-	{
-		if (0 == arr[i])
-		{
-			continue;
-		}
-		int j = arr[i];
-		for (j* j; j < 200; j++)
-		{
-			if (arr[j] != 0)
-			{
-				if (arr[j] % arr[i] == 0)
-				{
-					arr[j] = 0;
-				}
-			}
-		}
-	}
-	printf("这是使用筛选法判断出来的素数:");
-	for (i = 100; i < 200; i++)
-	{
-		if (arr[i] != 0)
-		{
-			printf("%d ", arr[i]);
-		}
-	}
-	return 0;
-}
-
-
-
-
-
-
-
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int arr[200] = { 0 };
+//	for (i = 0; i < 200; i++)
+//	{
+//		arr[i] = i + 1;
+//	}
+//	arr[0] = 0;
+//	for (i = 1; i < 13; i++)
+//	{
+//		if (0 == arr[i])
+//		{
+//			continue;
+//		}
+//		int j = arr[i];
+//		for (j* j; j < 200; j++)
+//		{
+//			if (arr[j] != 0)
+//			{
+//				if (arr[j] % arr[i] == 0)
+//				{
+//					arr[j] = 0;
+//				}
+//			}
+//		}
+//	}
+//	printf("这是使用筛选法判断出来的素数:");
+//	for (i = 100; i < 200; i++)
+//	{
+//		if (arr[i] != 0)
+//		{
+//			printf("%d ", arr[i]);
+//		}
+//	}
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//
