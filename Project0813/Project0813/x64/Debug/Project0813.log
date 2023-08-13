@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\github托管\C-learn\Project0813\Project0813\test.c(183,20): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
   Project0813.vcxproj -> D:\github托管\C-learn\Project0813\x64\Debug\Project0813.exe
