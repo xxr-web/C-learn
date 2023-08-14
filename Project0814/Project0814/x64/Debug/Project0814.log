@@ -1,2 +1,4 @@
 ﻿  test.c
+D:\github托管\C-learn\Project0814\Project0814\test.c(218,26): warning C4554: “&”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
+D:\github托管\C-learn\Project0814\Project0814\test.c(225,29): warning C4554: “&”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
   Project0814.vcxproj -> D:\github托管\C-learn\Project0814\x64\Debug\Project0814.exe
