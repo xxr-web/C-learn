@@ -133,20 +133,130 @@
 //}
 //表达式有两个属性，值属性和类型属性。
 
-#include<stdio.h>
-#include <string.h>
+//#include<stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	int a[] = { 1,2,3,4 };
+//	printf("%d\n", sizeof(a));//16
+//	printf("%d\n", sizeof(a + 0));//数组首元素地址,8
+//	printf("%d\n", sizeof(*a));//4
+//	printf("%d\n", sizeof(a + 1));//8
+//	printf("%d\n", sizeof(a[1]));//4
+//	printf("%d\n", sizeof(&a));//8
+//	printf("%d\n", sizeof(*&a));//16,sizeof(a)
+//	printf("%d\n", sizeof(&a + 1));//8
+//	printf("%d\n", sizeof(&a[0]));//8
+//	printf("%d\n", sizeof(&a[0] + 1));//8
+//}
+//学会看操作符的原码
+
+//#include <stdio.h>
+//
+//void DrawCircle()
+//{
+//	printf("圆形\n");
+//}
+//
+//void DrawRect()
+//{
+//	printf("矩形\n");
+//}
+//
+//void DrawTriangle()
+//{
+//	printf("三角形\n");
+//}
+//
+//void drawshape(void(*p)())
+//{
+//	(*p)();
+//}
+//
+//void menu()
+//{
+//	printf("**************\n");
+//	printf("****0.exit****\n");
+//	printf("***1.Circlr***\n");
+//	printf("****2.Rect****\n");
+//	printf("**3.Triangle**\n");
+//	printf("**************\n");
+//}
+//
+//int main()
+//{
+//	int input = 0;
+//	void (*drawFuncs[3])() = { DrawCircle, DrawRect, DrawTriangle };
+//	do
+//	{
+//		menu();
+//		printf("请输入:");
+//		scanf("%d", &input);
+//		if ((input >= 1) && (input <= 3))
+//		{
+//			drawshape(*drawFuncs[input-1]);
+//		}
+//		else if (input == 0)
+//		{
+//			printf("已结束\n");
+//			break;
+//		}
+//		else
+//		{
+//			printf("输入错误，请重新输入\n");
+//		}
+//	} while (input);
+//}
+
+//qsort(void* Base, size_t num, size_t sz, int* cmp(const void* e1, const void* e2))
+
+#include <stdio.h>
+
+int cmp_int(const void* e1, const void* e2)//回调函数
+{
+	return (*(int*)e1 - *(int*)e2);
+}
+
+void Swap(void* e1, void* e2, size_t width)
+{
+	int i = 0;
+	for (i = 0; i < width; i++)
+	{
+		char tmp = *((char*)e1 + i);
+		*((char*)e1 + i) = *((char*)e2 + i);
+		*((char*)e2 + i) = tmp;
+	}
+}
+
+void Bubble_sort(int* Base, size_t sz, size_t width, int(* cmp)(const void* e1, const void* e2))//z是一个函数指针，在qsort函数的参数里是为了提示我们需要创建一个这个函数
+{
+	int i = 0, j = 0, flag = 0;
+	for (i = 0; i < sz; i++)
+	{
+		for (j = 0; j < sz - 1 - i; j++)
+		{
+			if (cmp((char*)Base + j * width, (char*)Base + (j + 1) * width) > 0)
+			{
+				flag = 1;
+				Swap((char*)Base + j * width , (char*)Base + (j + 1) * width, width);
+			}
+		}
+		if (0 == flag)
+		{
+			break;
+		}
+	}
+}
+
 int main()
 {
-	int a[] = { 1,2,3,4 };
-	printf("%d\n", sizeof(a));//16
-	printf("%d\n", sizeof(a + 0));//数组首元素地址,8
-	printf("%d\n", sizeof(*a));//4
-	printf("%d\n", sizeof(a + 1));//8
-	printf("%d\n", sizeof(a[1]));//4
-	printf("%d\n", sizeof(&a));//8
-	printf("%d\n", sizeof(*&a));//16,sizeof(a)
-	printf("%d\n", sizeof(&a + 1));//8
-	printf("%d\n", sizeof(&a[0]));//8
-	printf("%d\n", sizeof(&a[0] + 1));//8
+	int arr[] = { 3, 1, 2, 5, 4 };
+	Bubble_sort(&arr[0], sizeof(arr) / sizeof(arr[0]), sizeof(arr[0]), cmp_int);
+	int i = 0;
+	for (i = 0; i < sizeof(arr) / sizeof(arr[0]); i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	return 0;
 }
-//学会看操作符的原码
+
