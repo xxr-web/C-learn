@@ -111,15 +111,107 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-int main()
-{
-	char* c[] = { "ENTER","NEW","POINT","FIRST" };
-	char** cp[] = { c + 3,c + 2,c + 1,c };
-	char*** cpp = cp;
-	printf("%s\n", **++cpp);
-	printf("%s\n", *-- * ++cpp + 3);
-	printf("%s\n", *cpp[-2] + 3);
-	printf("%s\n", cpp[-1][-1] + 1);
-	return 0;
-}
+//#include <stdio.h>
+//int main()
+//{
+//	char* c[] = { "ENTER","NEW","POINT","FIRST" };
+//	char** cp[] = { c + 3,c + 2,c + 1,c };
+//	char*** cpp = cp;
+//	printf("%s\n", **++cpp);
+//	printf("%s\n", *-- * ++cpp + 3);
+//	printf("%s\n", *cpp[-2] + 3);
+//	printf("%s\n", cpp[-1][-1] + 1);
+//	return 0;
+//}
+
+//void PrintArray1(int(*array)[100], int row, int col)
+//{
+//	int i = 0, j = 0;
+//	for (i = 0; i < row; i++)
+//	{
+//		for (j = 0; j < col; j++)
+//		{
+//			printf("%d ", *(*(array + i) + j));
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//void PrintArray(int* array, int row, int col)
+//{
+//	int i = 0, j = 0;
+//	for (i = 0; i < row * col; i++)
+//	{
+//		printf("%d ", *(array + i));
+//		if (0 == ((i + 1) % col))
+//		{
+//			printf("\n");
+//		}
+//	}
+//}
+
+
+
+//int main()
+//{
+//	int array[3][5] = { { 0, 1, 2, 3, 4 }, { 1, 2, 3, 4, 5 }, { 2, 3, 4, 5, 6 } };
+//	PrintArray(&array[0][0], 3, 5);
+//}
+
+
+//int main()
+//{
+//	int m = 0, n = 0, i = 0, j = 0;
+//	int array[100][100] = { 0 };
+//	printf("请输入二维数组的行和列:");
+//	scanf("%d%d", &m, &n);
+//	printf("请输入二维数组的元素:");
+//	for (i = 0; i < m; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//		{
+//			scanf("%d", &array[i][j]);
+//		}
+//	}
+//	//PrintArray1(array, m, n);
+//	PrintArray(&array[0][0], m, n);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int arr[200] = { 0 };
+//	for (i = 0; i < 100; i++)
+//	{
+//		arr[i] = i + 1;
+//	}
+//	arr[0] = 0;
+//	for (i = 1; i < 7; i++)
+//	{
+//		if (0 == arr[i])
+//		{
+//			continue;
+//		}
+//		int j = arr[i];
+//		for (j = j * j; j <= 100; j++)
+//		{
+//			if (arr[j - 1] != 0)
+//			{
+//				if (arr[j - 1] % arr[i] == 0)
+//				{
+//					arr[j - 1] = 0;
+//				}
+//			}
+//		}
+//	}
+//	printf("这是使用筛选法判断出来的素数:");
+//	for (i = 0; i < 100; i++)
+//	{
+//		if (arr[i] != 0)
+//		{
+//			printf("%d ", arr[i]);
+//		}
+//	}
+//	return 0;
+//}
