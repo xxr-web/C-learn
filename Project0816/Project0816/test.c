@@ -469,24 +469,24 @@
 //	return 0;
 //}
 
-#include <stdio.h>
-
-void Print(int x)
-{
-    printf("%d\n", x);
-}
-
-int main()
-{
-    typedef int(*parr_t)[5];//将int(*p)[5]这个数组指针转换成parr_t,放在*右面
-    typedef void(*pfun_t)(int);//将void(*p)(int, int)这个函数指针转换成pfun_t
-    int arr[5] = { 0, 1, 2, 3, 4 };
-    parr_t p1 = &arr;
-    printf("%p %p\n", &arr, p1);
-    pfun_t p2 = &Print;
-    p2(1);
-    printf("%d\n", printf("%d ",1));
-    return 0;
-    
-}
+//#include <stdio.h>
+//
+//void Print(int x)
+//{
+//    printf("%d\n", x);
+//}
+//
+//int main()
+//{
+//    typedef int(*parr_t)[5];//将int(*p)[5]这个数组指针转换成parr_t,放在*右面
+//    typedef void(*pfun_t)(int);//将void(*p)(int, int)这个函数指针转换成pfun_t
+//    int arr[5] = { 0, 1, 2, 3, 4 };
+//    parr_t p1 = &arr;
+//    printf("%p %p\n", &arr, p1);
+//    pfun_t p2 = &Print;
+//    p2(1);
+//    printf("%d\n", printf("%d ",1));
+//    return 0;
+//    
+//}
 

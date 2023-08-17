@@ -215,3 +215,173 @@
 //	}
 //	return 0;
 //}
+
+//void Print(int* arr, int x, int y)//就用这个指针打印出来。
+//{
+//	int i = 0, j = 0;
+//	/*for (i = 0; i < x * y; i++)
+//	{
+//		printf("%d ", *(arr + i));
+//		if ((i + 1) % x == 0)
+//		printf("\n");
+//	}*/
+//	for (i = 0; i < x; i++)
+//	{
+//		for (j = 0; j < y; j++)
+//		{
+//			printf("%d ", *(arr + i * y + j));
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main()
+//{
+//	int m = 0, n = 0, i = 0, j = 0;
+//	printf("请输入二维数组的行和列:");//变长数组可以解决这个问题
+//	scanf("%d%d", &m, &n);
+//	int arr[100][100] = { 0 };
+//	for (i = 0; i < m; i++)
+//	{
+//		for (j = 0; j < n; j++)
+//		{
+//			scanf("%d", &arr[i][j]);
+//		}
+//	}
+//	//int arr[5][5] = { {1},{2},{3}, {4}, {5} };
+//	Print((int*)arr, m, n);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 10;
+//	int arr[] = { 1, 2 };
+//	size_t sz = sizeof(arr);
+//	printf("%zd\n", sizeof(i));
+//	printf("%zd\n", sizeof(int));
+//	printf("%zd\n", sz);
+//	return 0;
+//}
+
+//int main()
+//{
+//	short a = 10;
+//	printf("%zd\n", sizeof(a = a + 10));
+//	printf("%d\n", a);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char arr1[3] = { 'a', 'b', 'c' };
+//	char arr2[] = "abc";
+//	printf("%d\n", strlen(arr1));
+//	printf("%d\n", strlen(arr2));
+//
+//	printf("%d\n", sizeof(arr1));
+//	printf("%d\n", sizeof(arr2));
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a[] = { 1,2,3,4 };
+//	printf("%d\n", sizeof(a));
+//	printf("%d\n", sizeof(a + 0));
+//	printf("%d\n", sizeof(*a));
+//	printf("%d\n", sizeof(a + 1));
+//	printf("%d\n", sizeof(a[1]));
+//	printf("%d\n", sizeof(&a));
+//	printf("%d\n", sizeof(*&a));
+//	printf("%d\n", sizeof(&a + 1));
+//	printf("%d\n", sizeof(&a[0]));
+//	printf("%d\n", sizeof(&a[0] + 1));
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr1[] = { 1, 2, 3 };
+//	int arr2[] = { 0, 1, 2 };
+//	printf("%zd\n", strlen(arr1));
+//	printf("%zd\n", strlen(arr2));
+//	return 0;
+//}
+
+//int main()
+//{
+//    char arr[] = { 'a','b','c','d','e','f' };
+//    printf("%d\n", sizeof(arr));//6
+//    printf("%d\n", sizeof(arr + 0));//4/8
+//    printf("%d\n", sizeof(*arr));//1
+//    printf("%d\n", sizeof(arr[1]));//1
+//    printf("%d\n", sizeof(&arr));//4/8
+//    printf("%d\n", sizeof(&arr + 1));//4/8
+//    printf("%d\n", sizeof(&arr[0] + 1));//4/8
+//    printf("%d\n", strlen(arr));//随机值，因为目前不确定到哪里遇到字节00
+//    printf("%d\n", strlen(arr + 0));//随机值,但是比上一个小1
+//    //printf("%d\n", strlen(*arr));//非法访问，访问冲突，*arr = a,访问以a的ASCII码值0000000000000097为地址的内存空间，但是其实是没有权限的
+//    //printf("%d\n", strlen(arr[1]));//×，下文都以此代表访问冲突
+//    printf("%d\n", strlen(&arr));//随机值
+//    printf("%d\n", strlen(&arr + 1));//随机值
+//    printf("%d\n", strlen(&arr[0] + 1));//随机值
+//    return 0;
+//}
+
+//int main()
+//{
+//	char arr[] = "abcdef";
+//	printf("%d\n", sizeof(arr));//7，有'\0'
+//	printf("%d\n", sizeof(arr + 0));//4/8
+//	printf("%d\n", sizeof(*arr));//1
+//	printf("%d\n", sizeof(arr[1]));//1
+//	printf("%d\n", sizeof(&arr));//4/8
+//	printf("%d\n", sizeof(&arr + 1));//4/8
+//	printf("%d\n", sizeof(&arr[0] + 1));//4/8
+//	printf("%d\n", strlen(arr));//6
+//	printf("%d\n", strlen(arr + 0));//6
+//	printf("%d\n", strlen(*arr));//×
+//	printf("%d\n", strlen(arr[1]));//×
+//	printf("%d\n", strlen(&arr));//6，指针取得也是第一个元素的地址
+//	printf("%d\n", strlen(&arr + 1));//随机值
+//	printf("%d\n", strlen(&arr[0] + 1));//5
+//	return 0;
+//}
+
+//int main()
+//{
+//	char* p = "abcdef";
+//	printf("%d\n", sizeof(p));//4/8
+//	printf("%d\n", sizeof(p + 1));//4/8
+//	printf("%d\n", sizeof(*p));//1,*p解引用出来的就是a，这是字符指针变量的用法，p直接用才是字符串
+//	printf("%d\n", sizeof(p[0]));//p[0]就是a,所以是1
+//	printf("%d\n", sizeof(&p));//4/8
+//	printf("%d\n", sizeof(&p + 1));//4/8
+//	printf("%d\n", sizeof(&p[0] + 1));//4/8
+//	printf("%d\n", strlen(p));//6
+//	printf("%d\n", strlen(p + 1));//5
+//	printf("%d\n", strlen(*p));//×
+//	printf("%d\n", strlen(p[0]));//×
+//	printf("%d\n", strlen(&p));//随机值
+//	printf("%d\n", strlen(&p + 1));//随机值
+//	printf("%d\n", strlen(&p[0] + 1));//随机值
+//	return 0;
+//}
+
+int main()
+{
+	int a[3][4] = { 0 };
+	printf("%d\n", sizeof(a));//48
+	printf("%d\n", sizeof(a[0][0]));//4 
+	printf("%d\n", sizeof(a[0]));//第一行数组，16
+	printf("%d\n", sizeof(a[0] + 1));//4/8,第一行数组第二个元素的地址
+	printf("%d\n", sizeof(*(a[0] + 1))); //4
+	printf("%d\n", sizeof(a + 1));//4/8，第二行数组的地址
+	printf("%d\n", sizeof(*(a + 1)));//16，第二行数组
+	printf("%d\n", sizeof(&a[0] + 1));//4/8,第二行数组的地址
+	printf("%d\n", sizeof(*(&a[0] + 1))); //16
+	printf("%d\n", sizeof(*a));//第一行数组，16
+	printf("%d\n", sizeof(a[3]));//16
+	return 0;
+}

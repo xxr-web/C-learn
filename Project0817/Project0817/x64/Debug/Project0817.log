@@ -1,2 +1,24 @@
 ﻿  test.c
+D:\github托管\C-learn\Project0817\Project0817\test.c(375,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(375,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(376,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(376,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(377,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(377,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(378,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(378,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(379,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(379,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(380,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(380,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(381,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(381,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(382,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(382,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(383,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(383,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(384,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(384,9): message : 请考虑在格式字符串中使用“%zd”
+D:\github托管\C-learn\Project0817\Project0817\test.c(385,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\github托管\C-learn\Project0817\Project0817\test.c(385,9): message : 请考虑在格式字符串中使用“%zd”
   Project0817.vcxproj -> D:\github托管\C-learn\Project0817\x64\Debug\Project0817.exe
