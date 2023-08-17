@@ -1,0 +1,4 @@
+﻿  test.c
+D:\github托管\C-learn\Project0817\Project0817\test.c(98,4): warning C4048: “int (*)[4]”和“int (*)[5]”数组的下标不同
+D:\github托管\C-learn\Project0817\Project0817\test.c(99,9): warning C4477: “printf”: 格式字符串“%p”需要类型“void *”的参数，但可变参数 1 拥有了类型“int”
+  Project0817.vcxproj -> D:\github托管\C-learn\Project0817\Debug\Project0817.exe
