@@ -1,0 +1,6 @@
+﻿  test.c
+D:\github托管\C-learn\Project0818\Project0818\test.c(160,20): warning C4312: “类型强制转换”: 从“int”转换到更大的“int *”
+D:\github托管\C-learn\Project0818\Project0818\test.c(161,32): warning C4312: “类型强制转换”: 从“int”转换到更大的“int *”
+D:\github托管\C-learn\Project0818\Project0818\test.c(170,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+D:\github托管\C-learn\Project0818\Project0818\test.c(170,9): warning C4313: "printf": 格式字符串中的 "%d" 与类型为 "int *" 的参数 1 冲突
+  Project0818.vcxproj -> D:\github托管\C-learn\Project0818\x64\Debug\Project0818.exe
