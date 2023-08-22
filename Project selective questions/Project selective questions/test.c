@@ -397,7 +397,25 @@
 //	return 0;
 //}
 
-//18
+//18.求字符串长度(进阶)
+//#include <stdio.h>
+//int Strlen(char* p)
+//{
+//	if (*p != '\0')
+//	{
+//		//p = p + 1;
+//		return 1 + Strlen(++p);//不能后置加加
+//	}
+//	else
+//		return 0;
+//}
+//int main()
+//{
+//	char arr[31] = { '0' };
+//	gets(arr);
+//	int ret = Strlen(arr);
+//	printf("%d\n", ret);
+//}
 //19.逆序字符串
 //#include <stdio.h>
 //#include <string.h>
@@ -437,6 +455,8 @@
 //	printf("%d\n", sum);
 //	return 0;
 //}
+
+
 
 
 
