@@ -456,6 +456,49 @@
 //	return 0;
 //}
 
+//青蛙跳台阶问题
+//#include <stdio.h>
+//int Jump(int x)
+//{
+//	if (1 == x)
+//		return 1;
+//	else if (2 == x)
+//		return 2;
+//	else
+//		return Jump(x - 1) + Jump(x - 2);
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int ret = Jump(n);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//汉诺塔问题
+//#include <stdio.h>
+//int Hanoi(int x, char a, char b, char c)
+//{
+//	if (1 == x)
+//	{
+//		printf("%c→%c\n", a, c);
+//		return 1;
+//	}
+//	else
+//	{
+//		return Hanoi(x - 1, a, c, b) + Hanoi(1, a, b, c) + Hanoi(x - 1, b, a, c);;
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int ret = Hanoi(n, 'A', 'B', 'C');
+//	printf("需要移动的次数为%d\n", ret);
+//	return 0;
+//}
+
 
 
 

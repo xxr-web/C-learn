@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\github托管\C-learn\Project selective questions\Project selective questions\test.c(415,2): warning C4013: “gets”未定义；假设外部返回 int
   Project selective questions.vcxproj -> D:\github托管\C-learn\Project selective questions\x64\Debug\Project selective questions.exe
