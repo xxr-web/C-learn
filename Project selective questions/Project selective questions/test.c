@@ -499,6 +499,205 @@
 //	return 0;
 //}
 
+//21.回文字符串判断
+//法1:其实有一些想麻烦了，可以更简单一些。
+//#include <stdio.h>
+//#include <string.h>
+//void Reverse(char* p1)
+//{
+//	size_t len = strlen(p1);
+//	int left = 0, right = (int)len - 1;
+//	while (left <= right)
+//	{
+//		char ret = p1[left];
+//		p1[left] = p1[right];
+//		p1[right] = ret;
+//		left++, right--;
+//	}
+//}
+//int Huiwen(char* p)
+//{
+//	char arr1[31] = { '0' };
+//	int i = 0;
+//	size_t len = strlen(p);
+//	char* i = p;//这样不可以，会被修改
+//	for (i = 0; i < (int)len; i++)//注意这里我新创建了一个数组，因为如果单纯的复制一份地址，其实是都会被修改的，所以开辟一块新的地址来存放新的字符串
+//	{
+//		arr1[i] = p[i];
+//	}
+//	Reverse(arr1);
+//	int ret = strcmp(p, arr1);
+//	if (0 == ret)
+//		return 1;
+//	else
+//		return 0;
+//}
+//int main()
+//{
+//	while (1)
+//	{
+//		char arr[31] = { '0' };
+//		gets(arr);
+//		int ret = Huiwen(arr);
+//		if (1 == ret)
+//			printf("Yes\n");
+//		else
+//			printf("No\n");
+//	}
+//	return 0;
+//}
+//法2
+//#include <stdio.h>
+//int main()
+//{
+//	char arr[31] = { '0' };
+//	while (1)
+//	{
+//		gets(arr);
+//		size_t sz = strlen(arr);
+//		int left = 0, right = (int)sz - 1, flag = 0;
+//		while (left <= right)
+//		{
+//			if (arr[left] != arr[right])
+//				flag = 1;
+//			left++, right--;
+//		}
+//		if (0 == flag)
+//			printf("Yes\n");
+//		else
+//			printf("NO\n");
+//	}
+//	return 0;
+//}
+
+//22.计算天数
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+//	int y = 0, m = 0;
+//	while (scanf("%d%d", &y, &m) != EOF)
+//	{
+//		if (((y % 4 == 0) && (y % 100 != 0)) || (y % 400 == 0))
+//		{
+//			arr[1] = arr[1] + 1;
+//		}
+//		printf("%d\n", arr[m - 1]);
+//	}
+//	return 0;
+//}
+
+//23.删除指定的数
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 }, i = 0, n = 0;
+//	while (1)
+//	{
+//		int j = 0;
+//		for (i = 0; i < 10; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		scanf("%d", &n);
+//		int arr1[10] = { 0 };
+//		for (i = 0; i < 10; i++)
+//		{
+//			if (n != arr[i])
+//			{
+//				arr[j] = arr[i];
+//				j++;
+//			}
+//		}
+//		for (i = 0; i < j; i++)
+//		{
+//			printf("%d ", arr[i]);
+//		}
+//		printf("\n");
+//	}
+//		return 0;
+//}
+
+//24.字符串拷贝
+//#include <stdio.h>
+//#include <string.h>
+//void my_strcpy(const char* p1, char* p2)
+//{
+//	size_t sz = strlen(p1);
+//	int i = 0;
+//	for (i = 0; i < (int)sz; i++)
+//	{
+//		p2[i] = p1[i];
+//	}
+//	p2[i] = '\0';
+//}
+//int main()
+//{
+//	char arr1[31] = { '0' }, arr2[31] = { '0' };
+//	gets(arr1);
+//	my_strcpy(arr1, arr2);
+//	puts(arr2);
+//	return 0;
+//}
+
+//25.合并有序数组
+#include <stdio.h>
+#include <string.h>
+int cmp(const void* p1, const void* p2)
+{
+	return *(int*)p1 - *(int*)p2;
+}
+int main()
+{
+	int n = 0, m = 0, i = 0, j = 0, flag = 0;
+	int arr1[60] = { 0 }, arr2[60] = { 0 };
+	scanf("%d%d", &n, &m);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &arr1[i]);
+	}
+	for (i = 0; i < m; i++)
+	{
+		scanf("%d", &arr2[i]);
+	}
+	for (i = n, j = 0; i < n + m, j < m; i++, j++)
+	{
+		arr1[i] = arr2[j];
+	}
+	/*qsort(&arr1[0], m + n, sizeof(int), cmp);*/
+	for (i = 0; i < m + n - 1; i++)
+	{
+		for (j = 0; j < m + n - 1 - i; j++)
+		{
+			if (arr1[j] > arr1[j + 1])
+			{
+				int ret = arr1[j];
+				arr1[j] = arr1[j + 1];
+				arr1[j + 1] = ret;
+				flag = 1;
+			}
+		}
+		if (0 == flag)
+			break;
+	}
+	for (i = 0; i < m + n; i++)
+	{
+		printf("%d ", arr1[i]);
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
