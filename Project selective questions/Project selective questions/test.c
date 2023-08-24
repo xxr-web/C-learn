@@ -641,53 +641,109 @@
 //}
 
 //25.合并有序数组
+//#include <stdio.h>
+//#include <string.h>
+//int cmp(const void* p1, const void* p2)
+//{
+//	return *(int*)p1 - *(int*)p2;
+//}
+//int main()
+//{
+//	int n = 0, m = 0, i = 0, j = 0, flag = 0;
+//	int arr1[60] = { 0 }, arr2[60] = { 0 };
+//	scanf("%d%d", &n, &m);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr1[i]);
+//	}
+//	for (i = 0; i < m; i++)
+//	{
+//		scanf("%d", &arr2[i]);
+//	}
+//	for (i = n, j = 0; i < n + m, j < m; i++, j++)
+//	{
+//		arr1[i] = arr2[j];
+//	}
+//	/*qsort(&arr1[0], m + n, sizeof(int), cmp);*/
+//	for (i = 0; i < m + n - 1; i++)
+//	{
+//		for (j = 0; j < m + n - 1 - i; j++)
+//		{
+//			if (arr1[j] > arr1[j + 1])
+//			{
+//				int ret = arr1[j];
+//				arr1[j] = arr1[j + 1];
+//				arr1[j + 1] = ret;
+//				flag = 1;
+//			}
+//		}
+//		if (0 == flag)
+//			break;
+//	}
+//	for (i = 0; i < m + n; i++)
+//	{
+//		printf("%d ", arr1[i]);
+//	}
+//	return 0;
+//}
+
+//28题
+//29题，返回2和n的最小公倍数，n是正整数
+//int smallestEvenMultiple(int n)
+//{
+//    if ((n & 1) == 0)//1.判断奇偶，2.注意运算符优先级
+//    {
+//        return n;
+//    }
+//    return n * 2;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 1 & (-4);//位操作符都是对补码进行操作，正数可以直接来是因为原码等于补码，负数不可以
+//	printf("%d\n", a);
+//	int b = 6 & (-4);
+//	printf("%d\n", b);
+//	int c = 12 & (-4);
+//	printf("%d\n", c);
+//	int d = (-12) & (-4);
+//	printf("%d\n", d);
+//	return 0;
+//}
+
+//32.回文数值得学习学习
+//33.
+//
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 24 / 5;
+//	printf("%d\n", a);//向下取整，没有四舍五入
+//	return 0;
+//}
+
 #include <stdio.h>
-#include <string.h>
-int cmp(const void* p1, const void* p2)
+int Hanoi(int x, char qs, char zz, char js)//qs起始，zz中间,js结束
 {
-	return *(int*)p1 - *(int*)p2;
+	if (1 == x)
+	{
+		printf("%c→%c\n", qs, zz);
+		return 1;
+	}
+	else
+	{
+		return Hanoi(x - 1, qs, js, zz) + Hanoi(1, qs, zz, js) + Hanoi(x - 1, zz, qs, js);;
+	}
 }
 int main()
 {
-	int n = 0, m = 0, i = 0, j = 0, flag = 0;
-	int arr1[60] = { 0 }, arr2[60] = { 0 };
-	scanf("%d%d", &n, &m);
-	for (i = 0; i < n; i++)
-	{
-		scanf("%d", &arr1[i]);
-	}
-	for (i = 0; i < m; i++)
-	{
-		scanf("%d", &arr2[i]);
-	}
-	for (i = n, j = 0; i < n + m, j < m; i++, j++)
-	{
-		arr1[i] = arr2[j];
-	}
-	/*qsort(&arr1[0], m + n, sizeof(int), cmp);*/
-	for (i = 0; i < m + n - 1; i++)
-	{
-		for (j = 0; j < m + n - 1 - i; j++)
-		{
-			if (arr1[j] > arr1[j + 1])
-			{
-				int ret = arr1[j];
-				arr1[j] = arr1[j + 1];
-				arr1[j + 1] = ret;
-				flag = 1;
-			}
-		}
-		if (0 == flag)
-			break;
-	}
-	for (i = 0; i < m + n; i++)
-	{
-		printf("%d ", arr1[i]);
-	}
+	int i = 0;
+	scanf("%d", &i);
+	int ret = Hanoi(i, 'A', 'B', 'C');
+	printf("%d\n", ret);
 	return 0;
 }
-
-
 
 
 
