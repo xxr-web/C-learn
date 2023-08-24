@@ -1,0 +1,3 @@
+﻿  test.c
+D:\桌面\github托管\C-learn\Project0824\Project0824\test.c(73,9): warning C4477: “printf”: 格式字符串“%p”需要类型“void *”的参数，但可变参数 1 拥有了类型“int”
+  Project0824.vcxproj -> D:\桌面\github托管\C-learn\Project0824\Debug\Project0824.exe
