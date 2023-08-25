@@ -1,0 +1,4 @@
+﻿  test.c
+D:\桌面\github托管\C-learn\Project0825\Project0825\test.c(35,28): warning C4311: “类型强制转换”: 从“int [4]”到“int”的指针截断
+D:\桌面\github托管\C-learn\Project0825\Project0825\test.c(35,32): warning C4312: “类型强制转换”: 从“int”转换到更大的“int *”
+  Project0825.vcxproj -> D:\桌面\github托管\C-learn\Project0825\x64\Debug\Project0825.exe
