@@ -176,28 +176,117 @@
 //	return 0;
 //}
 
-#include <assert.h>
-char* my_strcpy(char* dest, const char* src)//源头不改
-{
-	char* ret = dest;
-	assert(dest != NULL);
-	assert(src != NULL);//优化
+//#include <assert.h>
+//char* my_strcpy(char* dest, const char* src)//源头不改
+//{
+//	char* ret = dest;
+//	assert(dest != NULL);
+//	assert(src != NULL);//优化
+//
+//	while ((*dest++ = *src++))//'\0'的ASCII码值就是0，结束循环，里面是一个赋值表达式，判断的是*dest++
+//	{
+//		;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr1[] = "abc";
+//	char arr2[20] = "0";
+//	char* p = my_strcpy(arr2, arr1);
+//	printf("%s\n", p);
+//	return 0;
+//}
 
-	while ((*dest++ = *src++))//'\0'的ASCII码值就是0，结束循环，里面是一个赋值表达式，判断的是*dest++
-	{
-		;
-	}
-	return ret;
-}
+//int main()
+//{
+//	char arr1[100] = "hello";
+//	strcat(arr1, " world!");
+//	puts(arr1);
+//	return 0;
+//}
 
-int main()
-{
-	char arr1[] = "abc";
-	char arr2[20] = "0";
-	char* p = my_strcpy(arr2, arr1);
-	printf("%s\n", p);
-	return 0;
-}
+//int main()
+//{
+//	char* p = "abcdef";
+//	printf("%c\n", *p);
+//	printf("%s\n", p);
+//	return 0;
+//}
+
+//#include <assert.h>
+//char* my_strcat(char* p, const char* q)
+//{
+//	char* ret = p;
+//	assert(p && q);
+//	while (*p != '\0')
+//	{
+//		p++;
+//	}
+//	while (*p = *q)
+//	{
+//		p++;
+//		q++;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr1[20] = "hello";
+//	char arr2[] = " world";
+//	printf("%s\n", my_strcat(arr1, arr2));
+//	my_strcat(arr1, arr1);//不能自己追加自己
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//size_t my_strlen(char* p)
+//{
+//	if (*p != '\0')
+//		return 1 + my_strlen(p + 1);
+//	else
+//		return 0;
+//}
+//int main()
+//{
+//	char arr[20] = "abcdef";
+//	size_t sz = my_strlen(arr);
+//	printf("%zd\n", sz);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//#include <assert.h>
+//char* my_strcpy(char* p, const char* q)
+//{
+//	char* ret = p;
+//	assert(p && q);
+//	while (*p = *q)
+//	{
+//		p++;
+//		q++;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	char arr1[] = "hello";
+//	char arr2[] = "world";
+//	printf("%s\n", my_strcpy(arr1, arr2));
+//	return 0;
+//}
+
+
+
+
+
+
+
+
 
 
 
