@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\桌面\github托管\C-learn\Project0921\Project0921\test.c(52): warning C4716: “my_memcpy”: 必须返回一个值
   Project0921.vcxproj -> D:\桌面\github托管\C-learn\Project0921\x64\Debug\Project0921.exe
