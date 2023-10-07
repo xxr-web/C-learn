@@ -183,6 +183,14 @@
 //	return 0;
 //}
 
+int main()
+{
+	int a = -1, b = 4, k;
+	k = (++a < 0) && !(b-- <= 0);//¶ÌÂ·Ô­Ôò
+	printf("%d, %d, %d\n", k, a, b);
+	return 0;
+}
+
 
 
 
