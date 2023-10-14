@@ -257,17 +257,112 @@
 //	return 0;
 //}
 
-#include <windows.h>
-int main()
-{
-	unsigned int i;
-	for (i = 9; i >= 0; i--)
-	{
-		printf("%u\n", i);
-		Sleep(1000);
-	}
-	return 0;
-}
+//#include <windows.h>
+//int main()
+//{
+//	unsigned int i;
+//	for (i = 9; i >= 0; i--)
+//	{
+//		printf("%u\n", i);
+//		Sleep(1000);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n = 9;
+//	float* pFloat = (float*)&n;
+//	printf("n的值为：%d\n", n);//9
+//	printf("*pFloat的值为：%f\n", *pFloat);//0.000000,E全为0，接近于0很小的数字
+//	*pFloat = 9.0;
+//	printf("num的值为：%d\n", n);//01000001000100000000000000000000 1,091,567,616
+//	printf("*pFloat的值为：%f\n", *pFloat);//9.000000
+//	return 0;
+//}
+
+//int check()
+//{
+//	union
+//	{
+//		int i;
+//		char a;
+//	}un = { 0 };
+//	un.i = 1;
+//	return un.a;
+//}
+//
+//int main()
+//{
+//	int ret = check();
+//	if (1 == ret)
+//	{
+//		printf("是小端\n");
+//	}
+//	else
+//	{
+//		printf("是大端\n");
+//	}
+//	return 0;
+//}
+
+//enum Day
+//{
+//	Mon,
+//	Tues,
+//	Wed,
+//	Thur = 7,
+//	Fri,
+//	Sat,
+//	Sun
+//};
+//
+//int main()
+//{
+//	printf("%d %d", Mon, Fri);//0 8
+//	return 0;
+//}
+
+//#include <stdlib.h>
+//int main()
+//{
+//	int* p = (int*)malloc(10 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		perror(p);
+//		return 1;
+//	}
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*(p + i) = i;
+//		printf("%d ", p[i]);
+//	}
+//	free(p);//释放了P里面的内容，但是p这个指针依然指向40个字节的起始地址，变成了野指针
+//	p = NULL;
+//	return 0;
+//}
+
+//#include <stdlib.h>
+//#define MAX_SIZE A+B
+//struct _Record_Struct
+//{
+//	unsigned char Env_Alarm_ID : 4;
+//	unsigned char Para1 : 2;
+//	unsigned char state;
+//	unsigned char avail : 1;
+//}*Env_Alarm_Record;
+//int main()
+//{
+//	int A = 2, B = 3;
+//	struct _Record_Struct* pointer = (struct _Record_Struct*)malloc(sizeof(struct _Record_Struct) * MAX_SIZE);
+//	printf("%zd\n", sizeof(pointer));
+//	return 0;
+//}
+
+
+
+
 
 
 
