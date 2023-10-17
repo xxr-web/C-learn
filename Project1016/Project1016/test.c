@@ -120,3 +120,74 @@
 //	Test();
 //	return 0;
 //}
+
+//char* GetMemory(void)
+//{
+//	char p[] = "hello world";
+//	return p;
+//}
+//void Test(void)
+//{
+//	char* str = NULL;
+//	str = GetMemory();//出了函数后p创建的空间已经被销毁了，返回栈空间（局部变量）地址，str已经是野指针 
+//	printf(str);
+//}
+//
+//int main()
+//{
+//	Test();
+//	return 0;
+//}
+
+//void Test(void)
+//{
+//	char* str = (char*)malloc(100);
+//	strcpy(str, "hello");
+//	free(str);
+//	if (str != NULL)
+//	{
+//		strcpy(str, "world");//内存空间已经被释放，非法访问
+//		printf(str);
+//	}
+//}
+
+//struct Stu
+//{
+//	int i;
+//	char a;
+//	int arr[0];
+//};
+//
+//int main()
+//{
+//	printf("%zd\n", sizeof(struct Stu));
+//	struct Stu* p = (struct Stu*)malloc(sizeof(struct Stu) + 10 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		perror("malloc");
+//		return 1;
+//	}
+//	int i = 0;
+//	p->i = 100;
+//	for (i = 0; i < 10; i++)
+//	{
+//		p->arr[i] = i;
+//	}
+//	struct Stu* ptr = realloc(p, sizeof(struct Stu) + 15 * sizeof(int));
+//	if (ptr != NULL)
+//	{
+//		p = ptr;
+//	}
+//	else
+//	{
+//		perror("realloc");
+//		return 1;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", p->arr[i]);
+//	}
+//	return 0;
+//}
+
+
