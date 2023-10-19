@@ -190,4 +190,30 @@
 //	return 0;
 //}
 
+struct Stu
+{
+	int i;
+	char a;
+	int arr[0];
+};
 
+int main()
+{
+	printf("%zd\n", sizeof(struct Stu));
+	struct Stu* p = (struct Stu*)malloc(sizeof(struct Stu) + 10 * sizeof(int));
+	if (p == NULL)
+	{
+		perror("malloc");
+		return 1;
+	}
+	int i = 0;
+	p->i = 100;
+	for (i = 0; i < 10; i++)
+	{
+		p->arr[i] = i;
+		printf("%d ", p->arr[i]);
+	}
+	free(p);
+	p = NULL;
+	return 0;
+}
