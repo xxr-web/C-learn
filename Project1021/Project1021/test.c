@@ -160,11 +160,152 @@
 //	}
 //}//(1 + n - 1) * (n - 1) / 2
 
-int main()
-{
+//void rotate(int* nums, int numsSize, int k) {
+//    int i = 0, j = 0;
+//    for (i = 0, j = numsSize - k - 1; i <= j; i++, j--)
+//    {
+//        int tmp = nums[i];
+//        nums[i] = nums[j];
+//        nums[j] = tmp;
+//    }
+//    for (i = numsSize - k, j = numsSize - 1; i <= j; i++, j--)
+//    {
+//        int tmp = nums[i];
+//        nums[i] = nums[j];
+//        nums[j] = tmp;
+//    }
+//    for (i = numsSize - 1; i >= 0; i--)
+//    {
+//        printf("%d ", nums[i]);
+//    }
+//}
+//
+//int main()
+//{
+//    int arr[7] = { 1, 2, 3, 4, 5, 6, 7 };
+//    rotate(arr, 7, 3);
+//    return 0;
+//}
 
+//void rotate(int* nums, int numsSize, int k) {//返回栈空间地址的问题
+//    int arr1[100000] = { 0 };
+//    if (0 == k)
+//    {
+//        ;
+//    }
+//    else
+//    {
+//        k %= numsSize;
+//        while (k >= numsSize)
+//        {
+//            k %= numsSize;
+//        }
+//        int i = 0, j = 0;
+//        for (i = 0, j = numsSize - k; i < k, j <= numsSize - 1; i++, j++)
+//        {
+//            arr1[i] = nums[j];
+//        }
+//        for (i = k, j = 0; i <= numsSize - 1, j < numsSize - k; i++, j++)
+//        {
+//            arr1[i] = nums[j];
+//        }
+//    }
+//    nums = arr1;
+//}
+//
+//int main()
+//{
+//    int arr[10] = { 1, 2, 3 ,4 ,5 ,6, 7, 8, 9 ,10 };
+//    rotate(arr, 10, 3);
+//    int  i = 0;
+//    for (i = 0; i < 10; i++)
+//    {
+//        printf("%d ", arr[i]);
+//    }
+//}
+
+//int* test1(int* p)
+//{
+//	int num[10] = { 0 };
+//	return num;
+//}
+//int main()
+//{
+//	int arr[10] = { 1, 2 ,3 ,4 ,5 ,6 ,7, 8, 9, 10 };
+//	int* p = test1(arr);
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", p[i]);
+//	}
+//}
+
+//void rotate(int* nums, int numsSize, int k) {
+//    int arr[100000] = { 0 };
+//    if (0 == k)
+//    {
+//        ;
+//    }
+//    else
+//    {
+//        k %= numsSize;
+//        while (k >= numsSize)
+//        {
+//            k %= numsSize;
+//        }
+//        int i = 0, j = 0;
+//        for (i = 0, j = numsSize - k; i < k, j <= numsSize - 1; i++, j++)
+//        {
+//            arr[i] = nums[j];
+//        }
+//        for (i = k, j = 0; i <= numsSize - 1, j < numsSize - k; i++, j++)
+//        {
+//            arr[i] = nums[j];
+//        }
+//        for (i = 0, j = 0; i < numsSize, j < numsSize; i++, j++)
+//        {
+//            nums[i] = arr[j];
+//        }
+//    }
+//}
+
+//void Reverse(int* nums, int begin, int end)
+//{
+//    int i = 0, j = 0;
+//    for (i = begin, j = end; i <= j; i++, j--)
+//    {
+//        int tmp = nums[i];
+//        nums[i] = nums[j];
+//        nums[j] = tmp;
+//    }
+//}
+//void rotate(int* nums, int numsSize, int k)
+//{
+//    int i = 0, j = 0;
+//    Reverse(nums, 0, numsSize - k - 1);
+//    Reverse(nums, numsSize - k, numsSize - 1);
+//    Reverse(nums, 0, numsSize - 1);
+//}
+
+//int main()
+//{
+//    int arr[10] = { 1, 2, 3, 4 ,5, 6, 7, 8, 9, 10 };
+//    rotate(arr, 10, 3);
+//    int i = 0;
+//    for (i = 0; i < 10; i++)
+//    {
+//        printf("%d ", arr[i]);
+//    }
+//    return 0;
+//}
+
+void rotate(int* nums, int numsSize, int k) {
+    int newArr[numsSize];//变长数组不能初始化
+    for (int i = 0; i < numsSize; ++i) {
+        newArr[(i + k) % numsSize] = nums[i];
+    }
+    for (int i = 0; i < numsSize; ++i) {
+        nums[i] = newArr[i];
+    }
 }
-
-
-
 
