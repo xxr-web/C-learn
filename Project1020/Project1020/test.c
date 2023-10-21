@@ -64,20 +64,87 @@
 //}
 
 //模拟offset
-#define Offsetof(type, member) (size_t)(&(((type*)0) -> member))//把结构体首元素的地址改为0，之后后面每一个元素的地址就是他们的偏移量。
+//#define Offsetof(type, member) (size_t)(&(((type*)0) -> member))//把结构体首元素的地址改为0，之后后面每一个元素的地址就是他们的偏移量。
+//
+//struct S
+//{
+//	char a;
+//	int b;
+//	char c;
+//};
+//
+//int main()
+//{
+//	printf("%zd\n", Offsetof(struct S, a));
+//	printf("%zd\n", Offsetof(struct S, b));
+//	printf("%zd\n", Offsetof(struct S, c));
+//	return 0;
+//}
 
-struct S
-{
-	char a;
-	int b;
-	char c;
-};
+//实现两个文件的复制粘贴
+#include <errno.h>
 
-int main()
-{
-	printf("%zd\n", Offsetof(struct S, a));
-	printf("%zd\n", Offsetof(struct S, b));
-	printf("%zd\n", Offsetof(struct S, c));
-	return 0;
-}
+//int main()
+//{
+//	FILE* fp = fopen("File1.txt", "w");
+//	if (fp == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	char str[10] = "abcdefghi";
+//	fputs(str, fp);
+//	fclose(fp);
+//	fp = NULL;
+//}
+
+//int main()
+//{
+//	FILE* fpread = fopen("File1.txt", "r");
+//	if (fpread == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	FILE* fpwrite = fopen("File2.txt", "w");
+//	if (fpwrite == NULL)
+//	{
+//		perror("fopen");
+//		fclose(fpread);
+//		fpread = NULL;
+//		return 1;
+//	}
+//	int ch = 0;
+//	while ((ch = fgetc(fpread)) != EOF)
+//	{
+//		fputc(ch, fpwrite);
+//	}
+//	fclose(fpwrite);
+//	fpwrite = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	FILE* fpread = fopen("File3.txt", "r");
+//	if (fpread == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	FILE* fpwrite = fopen("File4.txt", "w");
+//	if (fpwrite == NULL)
+//	{
+//		perror("fopen");
+//		fclose(fpread);
+//		fpread = NULL;
+//		return 1;
+//	}
+//	char str[1000] = { '0' };
+//	fgetc()
+//	fclose(fpwrite);
+//	fpwrite = NULL;
+//	return 0;
+//}
+
 
